@@ -4,6 +4,8 @@
         "constante.h": "c",
         "operators.h": "c",
         "condicion.h": "c",
-        "loops.h": "c"
+        "loops.h": "c",
+        "aritmeticos.h": "c",
+        "arrays.h": "c"
     }
 }
