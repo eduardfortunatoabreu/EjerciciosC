@@ -6,6 +6,11 @@
         "condicion.h": "c",
         "loops.h": "c",
         "aritmeticos.h": "c",
-        "arrays.h": "c"
+        "arrays.h": "c",
+        "string.h": "c",
+        "stringvar.h": "c",
+        "limits": "cpp",
+        "typede.h": "c",
+        "estructura.h": "c"
     }
 }

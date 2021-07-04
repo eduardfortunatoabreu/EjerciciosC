@@ -17,6 +17,7 @@
 #include "validate.h"
 
 
+#include "optiones.h"
 #include "variables.h"
 #include "constante.h"
 #include "operators.h"
@@ -24,6 +25,12 @@
 #include "condicion.h"
 #include "loops.h"
 #include "arrays.h"
+#include "stringvar.h"
+#include "pointer.h"
+#include "typede.h"
+#include "estructura.h"
+
+
 
 
 
@@ -46,28 +53,7 @@ void ClearDisplay()
 #endif
 }
 
-//VER LAS OPCIONES
-void ShowOptions()
-{
 
-    printf("\n\n\n*******************************************************************************\n");
-    printf("*********************************** Welcome ***********************************\n");
-    printf("*******************************************************************************\n");
-    printf("*                           Selected your option                              *\n");
-    printf("*                                                                             *\n");
-    printf("*       1 -> Variables and type                                               *\n");
-    printf("*       2 -> Contants                                                         *\n");
-    printf("*       3 -> Operators                                                        *\n");
-    printf("*       4 -> Conditionals                                                     *\n");
-    printf("*       5 -> Loops                                                            *\n");
-    printf("*       6 -> Arrays                                                           *\n");
-    printf("*       7 -> String                                                           *\n");
-    printf("*       8 -> Pointers                                                         *\n");
-    printf("*       9 -> Functions                                                        *\n");
-    printf("*       0 -> Exit                                                             *\n");
-    printf("*                                                                             *\n");
-    printf("*******************************************************************************\n");
-}
 
 //METODO PARA PAUSAR ANTES DE CERRAR EL SISTEMA
 void pause()
@@ -115,7 +101,23 @@ void Menu(int Opcion)
         case 6:
             arreglos(); 
             pause();
-            break;            
+            break;  
+        case 7:
+            VariableString(); 
+            pause();
+            break;                        
+        case 8:
+            DireccionMemoria(); 
+            pause();
+            break; 
+        case 9:
+            tipo(); 
+            pause();
+            break;             
+        case 10:
+            estructuras(); 
+            pause();
+            break;   
         default:
             printf("ESta no es una opcion del menu");   
             pause();
