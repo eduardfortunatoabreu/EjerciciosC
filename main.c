@@ -10,9 +10,17 @@
 //VARIABLE DE STRING
 #include <string.h>
 
+//PARA USAR PURGE Y LIMPIAR EL BUFER
+#include <stdio_ext.h>
+
+
+//ARCHIVOS CON LAS OTRAS metodos
 #include "variables.h"
 #include "constante.h"
 #include "operators.h"
+#include "aritmeticos.h"
+#include "condicion.h"
+
 
 
 
@@ -35,7 +43,7 @@ void ClearDisplay()
         system("clear");
     #else
     //CUNADO ES WINDOWS
-        system("clear");
+        system("cls");
     #endif
 }
 
@@ -76,7 +84,8 @@ void pause()
         //VALIDANDO TIPO DE SISTEMAS OPERATIVOS PARA LIMPIAR LA PANTALLA
     #ifdef SO
     //CUANDO ES UBUNTU
-    getchar();
+    printf("\nPresiones una tecla para continuar");   
+    __fpurge(stdin);
     getchar();
     #else
     //CUNADO ES WINDOWS
@@ -108,6 +117,11 @@ void Menu(int Opcion)
             OPeradores(); 
             pause();
             break;
+        case 4:
+            Comparacion(); 
+            pause();
+            break;
+            //Aritmeticos
         default:
             printf("ESta no es una opcion del menu");   
             pause();
@@ -163,8 +177,7 @@ int main(void)
         {
             //FUNCION ATOI PARA CONVERTIR TEXTO EN NUMERO
             if(atoi(Option) == 0)
-            {  
-                pause();   
+            {                  
                 ClearDisplay();               
                 break;
             }

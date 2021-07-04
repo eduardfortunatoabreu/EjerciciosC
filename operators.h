@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-
-
 
 
 void OPeradores()
@@ -12,7 +8,7 @@ void OPeradores()
 
     if(strcmp(&operador,"+") == 0)
     {
-        printf("Esto es una suma:\n");    
+        printf("Esto es una suma\n");    
     }
     else if(strcmp(&operador,"-") == 0)
     {

@@ -1,10 +1,8 @@
-#include <stdio.h>
 
-
-int main(void)
- {
-     int suma = 5+5;
-     int resta = 354-45-8;
+void Aritmeticos()
+{
+    int suma = 5+5;
+    int resta = 354-45-8;
     double divicion = 25/3;
     double multiplicacion = 78*85;
     double residuo = 3%2;
