@@ -20,6 +20,7 @@
 #include "operators.h"
 #include "aritmeticos.h"
 #include "condicion.h"
+#include "loops.h"
 
 
 
@@ -120,8 +121,11 @@ void Menu(int Opcion)
         case 4:
             Comparacion(); 
             pause();
+            break;            
+        case 5:
+            Bucle(); 
+            pause();
             break;
-            //Aritmeticos
         default:
             printf("ESta no es una opcion del menu");   
             pause();
