@@ -130,9 +130,7 @@ void ConsultarDatos(long codigo)
         struct json_object *parsed_json; //CREAMOS LA VARIABLE TIPO OBEJETO JSON   
         parsed_json = json_tokener_parse(buffer); //PASAMOS EL BUFFER A FORMATO JSON
         size_t n_tels; //PARA ALMACENAR LA CANTIDAD DE TELEFONOS ALMACENADA
-
-
-        //printf("%s\n",json_object_get_string(parsed_json)); //PARA VER EL CONTENIDO QUE TIENE EL JSON
+        
 
         //EXTRAER DEL JSON:
         //DESDE DONDE SE EXTRAERA PARSED_JSON
@@ -158,8 +156,6 @@ void ConsultarDatos(long codigo)
         //ALMACENAMOS EL TAMANO DEL ARREGLO DE TELEFONOS
         n_tels = json_object_array_length(telefonos);        
         
-        //printf("teke %s\n",telefonos);
-
         //RECORRER EL ARREGLO DE TELEDONO
         for(int i=0;i<n_tels;i++)       
         {                             
@@ -178,9 +174,6 @@ void ConsultarDatos(long codigo)
 
     pause();
 }
-
-
-
 
 
 //METODO PARA CAPTURAR LOS DATOS DEL CLIENTE Y ALMACENARLO EN DOCUMENTO TXT
@@ -318,9 +311,6 @@ bool CapturarDatos()
         }
     }
 }
-
-
-
 
 
 //MANEJAR DATOS DE CLIENTES
