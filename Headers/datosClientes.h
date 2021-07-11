@@ -113,6 +113,7 @@ void ConsultarDatos(long codigo)
     json_object *telefonos; 
     json_object *telefono; 
 
+
     //INSTANCIA DE ESTRUCTURA PARA ALMACENAR LOS DATOS DEL CLIENTE
     Cliente *clientes;
     //BUFFER PARA ALMCENAR LOS DATOS
@@ -146,22 +147,26 @@ void ConsultarDatos(long codigo)
         json_object_object_get_ex(parsed_json,"nom_cli",&nom_cli);  
         json_object_object_get_ex(parsed_json,"telefono",&telefonos);  
 
+        printf("Datos del Cliente\n\n\n");
         printf("Programa del cliente --> %s\n",json_object_get_string(programa));
-        printf("Codigo del cliente -->%s\n",json_object_get_string(cod_cli));
-        printf("Apellido 1 del cliente -->%s\n",json_object_get_string(ape1_cli));
-        printf("Apellido 2 del cliente -->%s\n",json_object_get_string(ape2_cli));
-        printf("Nombre del cliente -->%s\n",json_object_get_string(nom_cli));
-        printf("Feccha del cliente -->%s\n",json_object_get_string(f_actual));
+        printf("Codigo del cliente --> %s\n",json_object_get_string(cod_cli));
+        printf("Apellido 1 del cliente --> %s\n",json_object_get_string(ape1_cli));
+        printf("Apellido 2 del cliente --> %s\n",json_object_get_string(ape2_cli));
+        printf("Nombre del cliente --> %s\n",json_object_get_string(nom_cli));
+        printf("Feccha del cliente --> %s\n",json_object_get_string(f_actual));
         
         //ALMACENAMOS EL TAMANO DEL ARREGLO DE TELEFONOS
         n_tels = json_object_array_length(telefonos);        
         
+        //printf("teke %s\n",telefonos);
 
         //RECORRER EL ARREGLO DE TELEDONO
         for(int i=0;i<n_tels;i++)       
-        {            
-            printf("telefono %d %s\n",i+1,json_object_get_string(telefonos));
-                        
+        {                             
+            telefono = json_object_array_get_idx(telefonos,i);            
+            json_object *tel; 
+            json_object_object_get_ex(telefono,"numero",&tel);
+            printf("Telefono %d -->  %s\n",i+1,json_object_get_string(tel));                        
         }
 
     }
@@ -325,7 +330,7 @@ void DatosClientes()
     long capacidad = sizeof(long);
     char OptionCliente[2];
     long ClienteBuscar;
-    
+
     ClearDisplay();    
 
     while (true)
