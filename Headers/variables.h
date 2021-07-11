@@ -28,6 +28,7 @@ void variables()
     printf("\n");
 
 
+ 
    
 
     printf("Ingrese una linea de caractere limitado de 10 posiciones\n");

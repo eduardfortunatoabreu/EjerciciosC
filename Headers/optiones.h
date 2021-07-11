@@ -17,6 +17,7 @@ void ShowOptions()
     printf("*       8 -> Pointers                                                         *\n");
     printf("*       9 -> Typedef and Enum                                                 *\n");
     printf("*      10 -> Structs                                                          *\n");
+    printf("*      11 -> Caprutar datos CLientes                                          *\n");
     printf("*       0 -> Exit                                                             *\n");
     printf("*                                                                             *\n");
     printf("*******************************************************************************\n");

@@ -11,6 +11,19 @@
         "stringvar.h": "c",
         "limits": "cpp",
         "typede.h": "c",
-        "estructura.h": "c"
+        "estructura.h": "c",
+        "datosclientes.h": "c",
+        "algorithm": "c",
+        "json.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "optiones.h": "c",
+        "variables.h": "c",
+        "pointer.h": "c",
+        "sstream": "c",
+        "structcliente.h": "c",
+        "cstdio": "c",
+        "system_error": "c"
     }
 }

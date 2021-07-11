@@ -6,33 +6,12 @@
 #include <ctype.h>
 //PRA USAR VARIABLE TIPOS BOOLEANAS
 #include <stdbool.h>
-
 //VARIABLE DE STRING
 #include <string.h>
-
 //PARA USAR PURGE Y LIMPIAR EL BUFER
 #include <stdio_ext.h>
 
-//ARCHIVOS CON LAS OTRAS metodos
-#include "validate.h"
-
-
-#include "optiones.h"
-#include "variables.h"
-#include "constante.h"
-#include "operators.h"
-#include "aritmeticos.h"
-#include "condicion.h"
-#include "loops.h"
-#include "arrays.h"
-#include "stringvar.h"
-#include "pointer.h"
-#include "typede.h"
-#include "estructura.h"
-
-
-
-
+//MACRO PARA IDENTIFICAR EL SISTEMA OPERATIVO
 
 #ifdef __linux__
 #define SO "Linux"
@@ -40,35 +19,28 @@
 #define SO "Windows"
 #endif
 
-//METODO PARA LIMPIAR LA PANTALLA
-void ClearDisplay()
-{
-//VALIDANDO TIPO DE SISTEMAS OPERATIVOS PARA LIMPIAR LA PANTALLA
-#ifdef SO
-    //CUANDO ES UBUNTU
-    system("clear");
-#else
-    //CUNADO ES WINDOWS
-    system("cls");
-#endif
-}
+
+//ARCHIVOS CON LAS OTRAS metodos
+#include "Headers/validate.h"
+#include "Headers/optiones.h"
+#include "Headers/variables.h"
+#include "Headers/constante.h"
+#include "Headers/operators.h"
+#include "Headers/aritmeticos.h"
+#include "Headers/condicion.h"
+#include "Headers/loops.h"
+#include "Headers/arrays.h"
+#include "Headers/stringvar.h"
+#include "Headers/pointer.h"
+#include "Headers/typede.h"
+#include "Headers/estructura.h"
+#include "Headers/datosClientes.h"
+
+//HEADER PARA DECLARAR LOS METODOS
+#include "Interfaces/InterfaceEjercicio.h"
 
 
 
-//METODO PARA PAUSAR ANTES DE CERRAR EL SISTEMA
-void pause()
-{
-    //VALIDANDO TIPO DE SISTEMAS OPERATIVOS PARA LIMPIAR LA PANTALLA
-#ifdef SO
-    //CUANDO ES UBUNTU
-    printf("\nPresiones una tecla para continuar");
-    __fpurge(stdin);
-    getchar();
-#else
-//CUNADO ES WINDOWS
-//system("pause");
-#endif
-}
 
 //MENU DE OPCIONES
 void Menu(int Opcion)
@@ -117,7 +89,12 @@ void Menu(int Opcion)
         case 10:
             estructuras(); 
             pause();
-            break;   
+            break;
+        case 11:            
+            //ConsultarDatos();
+            DatosClientes();
+            pause();
+            break;
         default:
             printf("ESta no es una opcion del menu");   
             pause();
@@ -171,3 +148,6 @@ int main(void)
 
     return 0;
 }
+
+
+//gcc main.c -ljson-c -o main para copilar usando la libreria json 
