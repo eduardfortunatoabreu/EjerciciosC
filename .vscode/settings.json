@@ -24,6 +24,7 @@
         "sstream": "c",
         "structcliente.h": "c",
         "cstdio": "c",
-        "system_error": "c"
+        "system_error": "c",
+        "strucfactura.h": "c"
     }
 }

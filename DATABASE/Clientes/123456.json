@@ -1,0 +1,23 @@
+{
+    "usuario": "eduardfortunato",
+    "f_actual": "18\/07\/21",
+    "programa": "ede",
+    "cod_cli": 123456,
+    "ape1_cli": "fortunato",
+    "ape2_cli": "abreu",
+    "nom_cli": "eduard",
+    "telefono": [
+        {
+            "numero": "",
+            "programa": "ede",
+            "usuario": "eduardfortunato",
+            "f_actual": "18\/07\/21"
+        },
+        {
+            "numero": "",
+            "programa": "ede",
+            "usuario": "eduardfortunato",
+            "f_actual": "18\/07\/21"
+        }
+    ]
+}

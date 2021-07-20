@@ -1,4 +1,6 @@
-#include "../Structs/StructTelefono.h"
+#include "StructTelefono.h"
+
+
 
 //ESTRUCTURA DEL CLIENTE
 typedef struct
@@ -10,7 +12,8 @@ typedef struct
     char ape1_cli[21];
     char ape2_cli[21];
     char nom_cli[31];
-    Telefono *telefono;
+    Telefono *telefono;    
+        
 } Cliente;
 
 

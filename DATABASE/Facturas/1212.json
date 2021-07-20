@@ -1,0 +1,34 @@
+{
+    "facturas": [
+        {
+            "cod_cli": 1212,
+            "no_factura": 1,
+            "f_factura_inicio": "01-01-21",
+            "f_factura_cierre": "30-01-21",
+            "medida_kwh": 350,
+            "tarifa_fija": 137.25,
+            "cargo_energia": 3801,
+            "monto": 3938.25
+        },
+        {
+            "cod_cli": 1212,
+            "no_factura": 2,
+            "f_factura_inicio": "02-01-21",
+            "f_factura_cierre": "28-2-21",
+            "medida_kwh": 340,
+            "tarifa_fija": 137.25,
+            "cargo_energia": 3692.39990234375,
+            "monto": 3829.64990234375
+        },
+        {
+            "cod_cli": 1212,
+            "no_factura": 3,
+            "f_factura_inicio": "01-03-21",
+            "f_factura_cierre": "30-01-21",
+            "medida_kwh": 150,
+            "tarifa_fija": 137.25,
+            "cargo_energia": 666,
+            "monto": 803.25
+        }
+    ]
+}
